@@ -30,6 +30,14 @@ resource "aws_s3_bucket" "s3" {
   tags = {
     owner = aws_instance.myfirstterraformec2.id
   }
+output "instanceID" {
+  value       = aws_instance.myfirstterraformec2.id
 
+}
+output "InstanceName" {
+  value       = aws_instance.myfirstterraformec2.name
+}
+output "BucketName" {
+  value       = aws_s3_bucket.s3.bucket_domain_name
   
 }
